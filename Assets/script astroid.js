@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 // Inspector Variable
-var astroidSpeed :float = 6.0;
+var astroidSpeed :float = 2.0;
 
 function Start () {
 
@@ -14,6 +14,7 @@ function Update () {
 	if (transform.position.y <= -20){
 		transform.position.y = 15;
 		transform.position.x = Random.Range (-20.0, 20.0);
+
 	}
 
 
