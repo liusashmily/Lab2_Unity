@@ -1,8 +1,8 @@
 ﻿#pragma strict
 
 //Inspector Variable
-var bulletSpeed: float = 15.0;			// Speed of bullet
-
+var bulletSpeed		:float = 15.0;			// Speed of bullet
+var explosion		:Transform;
 
 function Start () {
 
@@ -24,6 +24,14 @@ function OnTriggerEnter (other : Collider) {
 	{
 		other.transform.position.y = 15;
 		other.transform.position.x = Random.Range (-20.0, 20.0);
+
+		// Create the explosion on impact
+		if (explosion) {
+			Instantiate(explosion, transform.position, transform.rotation);
+		}
+		
+		// Get rid of the bullet
+		Destroy (gameObject);
 	}
 
 }
