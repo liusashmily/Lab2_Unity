@@ -1,8 +1,9 @@
 ﻿#pragma strict
 
 // Inspector Variable
-var astroidSpeed :float = 2.0;
-var explosion	 :Transform;
+var astroidSpeed 	:float = 2.0;
+var explosion	 	:Transform;
+var sceneManager 	:GameObject;
 
 function Start () {
 
@@ -22,11 +23,17 @@ function OnTriggerEnter (other :Collider) {
 	//Debug.Log("Other Collider:" + other.name);
     //print ("before trigger lives:" + other.GetComponent(script_player).lives);
 	if (other.gameObject.tag == "Player") {
+
 		other.GetComponent(script_player).lives -= 1;
 
 		if(explosion) {
 			Instantiate (explosion, transform.position, transform.rotation);
 		}
+
+		// Tell scene manager that we destroyed one enemy and add a point to the score
+		sceneManager.transform.GetComponent(scriptSceneManager).SubtractLife();
+
+
 	}
 	// Reset the location
  	ResetEnemy();

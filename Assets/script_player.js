@@ -22,24 +22,6 @@ function Start () {
 
 // game loop
 function Update () {
-	// Move Player based on Input
-	/*if (Input.GetKey("up"))
-	{
-		transform.Translate(0,playerSpeed * Time.deltaTime,0);
-	}
-	if (Input.GetKey("down"))
-	{
-		transform.Translate(0,-playerSpeed * Time.deltaTime,0);
-	}
-	if (Input.GetKey("left"))
-	{
-		transform.Translate(-playerSpeed * Time.deltaTime,0,0);
-	}
-	if (Input.GetKey("right"))
-	{
-		transform.Translate(playerSpeed * Time.deltaTime,0,0);
-	}*/
-	
 	//transform.Translate(playerSpeed * Time.deltaTime,0,0);
 	//transform.Translate(0,0, playerSpeed * Time.deltaTime);
 	var transV:float = Input.GetAxis("Vertical") * playerSpeedVertical * Time.deltaTime;			//use to store variable for vertical movement
