@@ -15,12 +15,14 @@ function Start () {
 
 function Update () {
 	print("Score:" + score);
-	
-
 }
 
 function AddScore () {
 	score += 1;
 
 
+}
+
+function OnGUI () {
+	GUI.Label (Rect (10, 10, 100, 20), "Score:");
 }
