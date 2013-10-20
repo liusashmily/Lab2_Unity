@@ -3,6 +3,7 @@
 //Inspector Variable
 var bulletSpeed		:float = 15.0;			// Speed of bullet
 var explosion		:Transform;
+var sceneManager	:GameObject;			// Load the scripts for adding score
 
 function Start () {
 
@@ -30,8 +31,15 @@ function OnTriggerEnter (other : Collider) {
 			Instantiate(explosion, transform.position, transform.rotation);
 		}
 		
+		// Tell scene manager that we destroyed one enemy and add a point to the score
+		sceneManager.transform.GetComponent(scriptSceneManager).AddScore();
+
+
+
+
 		// Get rid of the bullet
 		Destroy (gameObject);
 	}
+
 
 }
