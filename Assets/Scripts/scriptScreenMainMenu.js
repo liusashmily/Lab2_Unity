@@ -2,6 +2,10 @@
 
 // Main Menu Script
 
+
+// Inspector Variable
+var waitTime : 			float = 3.0;
+
 function OnGUI () {
 	// Make a group on the center of the screen
 	GUI.BeginGroup (Rect(Screen.width / 2 - 50, Screen.height / 2 - 50, 100, 175));
