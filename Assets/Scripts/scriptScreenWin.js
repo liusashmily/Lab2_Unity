@@ -12,7 +12,7 @@ function OnGUI () {
 	GUI.Box(Rect(0,0,200,275), loseQuote);
 
 	// What was the score
-	GUI.Label(Rect(10,30,200,40),"Score: ");
+	GUI.Label(Rect(10,30,200,40),"Score: " + PlayerPrefs.GetInt("SCORE"));
 
 	// Add Buttons here
 	if(GUI.Button(Rect(60, 175, 80, 30), "Main Menu")){

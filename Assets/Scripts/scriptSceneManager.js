@@ -18,11 +18,15 @@ function Update () {
 	if (lives <= 0 ){
 		Application.LoadLevel("ScreenLose");
 		lives = 3;
+		score = 0;
+		PlayerPrefs.SetInt("SCORE", score);
 	}
 
 	if (gameTime <= 0) {
 		Application.LoadLevel("ScreenWin");
 		lives = 3;
+		score = 0;
+		PlayerPrefs.SetInt("SCORE", score);
 	}
 
 	print("Score:" + score);
