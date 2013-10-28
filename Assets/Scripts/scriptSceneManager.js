@@ -3,7 +3,7 @@
 // Scene Manager Scripte
 
 // Inspector Variables
-var gameTime 		:float = 60;
+var gameTime 		:float = 100;
 static var score 	:int = 0;
 static var lives	:int = 3;
 
@@ -15,6 +15,16 @@ function Start () {
 }
 
 function Update () {
+	if (lives <= 0 ){
+		Application.LoadLevel("ScreenLose");
+		lives = 3;
+	}
+
+	if (gameTime <= 0) {
+		Application.LoadLevel("ScreenWin");
+		lives = 3;
+	}
+
 	print("Score:" + score);
 }
 
