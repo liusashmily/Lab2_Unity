@@ -24,11 +24,6 @@ function Update () {
 }
 
 function OnTriggerEnter (other :Collider) {
-	//Debug.Log("Other Collider:" + other.name);
-    //print ("before trigger lives:" + other.GetComponent(script_player).lives);
-
-	// Reset the location
-// 	ResetEnemy();
 
 	if (other.gameObject.tag == "Player") {
 

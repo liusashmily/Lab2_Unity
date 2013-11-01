@@ -17,8 +17,6 @@ function Update () {
 }
 
 function OnTriggerEnter (other : Collider) {
-	//	print("We hit the ball");
-	//	print(other.name);
 
 	//Check for the astroid
 	if (other.gameObject.tag == "astroid")
@@ -33,9 +31,6 @@ function OnTriggerEnter (other : Collider) {
 		
 		// Tell scene manager that we destroyed one enemy and add a point to the score
 		sceneManager.transform.GetComponent(scriptSceneManager).AddScore();
-
-
-
 
 		// Get rid of the bullet
 		Destroy (gameObject);

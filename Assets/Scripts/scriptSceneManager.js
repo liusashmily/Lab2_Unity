@@ -29,7 +29,7 @@ function Update () {
 		PlayerPrefs.SetInt("SCORE", score);
 	}
 
-	print("Score:" + score);
+	// print("Score:" + score);
 }
 
 function AddScore () {

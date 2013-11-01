@@ -35,13 +35,6 @@ function Update () {
 	transform.position.x = Mathf.Clamp(transform.position.x, horMin, horMax);						// set horizontal limits;
 	transform.position.y = Mathf.Clamp(transform.position.y, VerMin, VerMax);						// set vertical limits
 
-/*	if(transform.position.x >= 25)
-		transform.position.x = 25;
-	if(transform.position.x <= -25 )
-		transform.position.x = -25;
-*/
-	//print(Mathf.Clamp(12, 1, 7));
-
 	// Create a bullet
 	if(Input.GetKeyDown("space")){
 		Instantiate(projectile,socketProjectile.position,socketProjectile.rotation);
@@ -58,6 +51,8 @@ function Update () {
 
 	}
 
+}
 
-
+function SetShieldFalse () {
+	shieldOn = false;
 }
