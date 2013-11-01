@@ -16,7 +16,7 @@ var shieldMesh					:Transform;			// Load shield mesh
 var shieldKeyInput				:KeyCode;
 
 //Private Variables
-
+var shieldOn					:boolean = false;
 
 function Start () {
 
@@ -50,8 +50,12 @@ function Update () {
 
 	// Create a shield
 	if(Input.GetKeyDown(shieldKeyInput)){
-		print("press E");
-		Instantiate(shieldMesh, transform.position, transform.rotation);
+		if(!shieldOn) {
+			var clone = Instantiate(shieldMesh, transform.position, transform.rotation);
+			clone.transform.parent = gameObject.transform;
+			shieldOn = true;
+		}
+
 	}
 
 
