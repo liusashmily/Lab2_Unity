@@ -16,6 +16,7 @@ function Update () {
 		// var sp: script_player = GetComponent(script_player);
 		var sp = GameObject.FindWithTag ("Player");
 		sp.GetComponent(script_player).SetShieldFalse();
+		audio.Play();
 		// sp.shieldOn = false;
 		// print ("shieldOn:" + sp.shieldOn);
 	}

@@ -13,7 +13,8 @@ function OnGUI () {
 	// Instruction for the palyer go here
 	GUI.Label(Rect(10,30,140,40),"Arrow Keys to Move");
 	GUI.Label(Rect(10,60,160,70),"Spancebar to Shoot");
-	GUI.Label(Rect(10,90,160,100),"Esc to Quit the Game");
+	GUI.Label(Rect(10,90,160,100),"E to Get Protection");
+	GUI.Label(Rect(10,120,160,130),"Esc to Quit the Game");
 
 	GUI.EndGroup();
 

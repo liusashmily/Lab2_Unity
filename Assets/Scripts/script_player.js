@@ -38,6 +38,7 @@ function Update () {
 	// Create a bullet
 	if(Input.GetKeyDown("space")){
 		Instantiate(projectile,socketProjectile.position,socketProjectile.rotation);
+		audio.Play();
 
 	}
 
