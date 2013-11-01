@@ -11,7 +11,9 @@ var VerMin						:float = -20.0;		// limits for player movement doewn
 var VerMax						:float = 20.0;		// limits for player movement on
 var projectile					:Transform;
 var socketProjectile			:Transform;
-
+var numberOfShields				:int = 4;			// Set the sheileds that player will use 
+var shieldMesh					:Transform;			// Load shield mesh
+var shieldKeyInput				:KeyCode;
 
 //Private Variables
 
@@ -44,6 +46,12 @@ function Update () {
 	if(Input.GetKeyDown("space")){
 		Instantiate(projectile,socketProjectile.position,socketProjectile.rotation);
 
+	}
+
+	// Create a shield
+	if(Input.GetKeyDown(shieldKeyInput)){
+		print("press E");
+		Instantiate(shieldMesh, transform.position, transform.rotation);
 	}
 
 
